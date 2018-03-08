@@ -1,0 +1,5 @@
+# smm
+Subversion Module Manager
+
+C# based manager for easy switching externals in subversion working copies.
+Requires CLI version of Subversion and TortoiseSVN for operation.

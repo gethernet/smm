@@ -1,0 +1,56 @@
+﻿<Window x:Class="smm.GUI.SelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:smm="clr-namespace:smm"
+        xmlns:Subversion="clr-namespace:smm.Subversion"
+        Title="Select path" Height="800" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Margin="0,0,0,0.333"/>
+        <TreeView x:Name="m_ctrlTreeView" Margin="5,24,-0.4,0.4" ItemsSource="{Binding Paths}">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="{x:Type Subversion:SvnXmlListPath}" ItemsSource="{Binding Entries}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Name="img"
+                           Width="16"
+                           Height="16"
+                           Stretch="Fill"
+                           Source="/icons/WorkingCopy.png"/>
+                        <TextBlock Foreground="{Binding Color}" Text="{Binding Name}" Margin="5, 0, 15, 0"  Grid.Column="1" />
+                    </Grid>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type Subversion:SvnXmlListEntry}" ItemsSource="{Binding Entries}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image Name="img"
+                           Width="16"
+                           Height="16"
+                           Stretch="Fill"
+                           Source="/icons/WorkingCopy.png"/>
+                        <TextBlock Foreground="{Binding Foreground}" FontWeight="{Binding FontWeight}" Text="{Binding Name}" Margin="5, 0, 15, 0"  Grid.Column="1" />
+                    </Grid>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="TreeViewItem">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+                    <Setter Property="IsExpanded" Value="True"/>
+                    <EventSetter Event="MouseDoubleClick" Handler="OnItemMouseDoubleClick" />
+                </Style>
+            </TreeView.ItemContainerStyle>
+        </TreeView>
+        <Button Content="O_K" Margin="5,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Click="OK_Click" IsDefault="True"/>
+        <Button Content="_Cancel" Margin="85,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Click="Cancel_Click" IsCancel="True"/>
+    </Grid>
+</Window>

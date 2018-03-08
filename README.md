@@ -1,2 +1,0 @@
-# smm
-Subversion Module Manager

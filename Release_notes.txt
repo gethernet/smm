@@ -1,0 +1,4 @@
+changes in version 1.0.0
+========================
+* replaced data representation to indirect mapping via TreeItem
+* added warning for local modifications before switching

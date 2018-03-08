@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smm", "sources\smm.csproj", "{288240A4-D028-4AC2-9F58-9792FA71D4E6}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup", "setup\setup.vdproj", "{40C9955F-74A4-4F6D-AF9A-DB95E85AEBBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{288240A4-D028-4AC2-9F58-9792FA71D4E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288240A4-D028-4AC2-9F58-9792FA71D4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288240A4-D028-4AC2-9F58-9792FA71D4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288240A4-D028-4AC2-9F58-9792FA71D4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C9955F-74A4-4F6D-AF9A-DB95E85AEBBB}.Debug|Any CPU.ActiveCfg = Debug
+		{40C9955F-74A4-4F6D-AF9A-DB95E85AEBBB}.Release|Any CPU.ActiveCfg = Release
+		{40C9955F-74A4-4F6D-AF9A-DB95E85AEBBB}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
